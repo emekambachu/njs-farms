@@ -1,34 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
-import '../public/assets/css/fontawesome-all.min.css';
-import '../public/assets/css/swiper.min.css';
-import '../public/assets/css/animate.min.css';
-import '../public/assets/css/odometer.min.css';
-import '../public/assets/css/jarallax.css';
-import '../public/assets/css/magnific-popup.css';
-import '../public/assets/css/bootstrap-select.min.css';
-import '../public/assets/css/agrikon-icons.css';
-import '../public/assets/css/nouislider.min.css';
-import '../public/assets/css/nouislider.pips.css';
-import '../public/assets/css/main.css';
+// import './assets/css/fontawesome-all.min.css';
+// import './assets/css/swiper.min.css';
+// import './assets/css/animate.min.css';
+// import './assets/css/odometer.min.css';
+// import './assets/css/jarallax.css';
+// import './assets/css/magnific-popup.css';
+// import './assets/css/bootstrap-select.min.css';
+// import './assets/css/agrikon-icons.css';
+// import './assets/css/nouislider.min.css';
+// import './assets/css/nouislider.pips.css';
+// import './assets/css/main.css';
 
-import '../public/assets/js/jquery-3.5.1.min.js';
-import '../public/assets/js/bootstrap.bundle.min.js';
-import '../public/assets/js/swiper.min.js';
-import '../public/assets/js/jquery.ajaxchimp.min.js';
-import '../public/assets/js/jquery.magnific-popup.min.js';
-import '../public/assets/js/jquery.validate.min.js';
-import '../public/assets/js/bootstrap-select.min.js';
-import '../public/assets/js/wow.js';
-import '../public/assets/js/odometer.min.js';
-import '../public/assets/js/jquery.appear.min.js';
-import '../public/assets/js/jarallax.min.js';
-import '../public/assets/js/circle-progress.min.js';
-import '../public/assets/js/wNumb.min.js';
-import '../public/assets/js/nouislider.min.js';
-import '../public/assets/js/theme.js';
+// import './assets/js/bootstrap.bundle.min.js';
+// import './assets/js/swiper.min.js';
+// import './assets/js/jquery.ajaxchimp.min.js';
+// import './assets/js/jquery.magnific-popup.min.js';
+// import './assets/js/jquery.validate.min.js';
+// import './assets/js/bootstrap-select.min.js';
+// import './assets/js/wow.js';
+// import './assets/js/odometer.min.js';
+// import './assets/js/jquery.appear.min.js';
+// import './assets/js/jarallax.min.js';
+// import './assets/js/circle-progress.min.js';
+// import './assets/js/wNumb.min.js';
+// import './assets/js/nouislider.min.js';
+// import './assets/js/theme.js';
 
 import {
   BrowserRouter,

@@ -1,10 +1,12 @@
 import {Link, Outlet} from "react-router-dom";
 
 export const LayoutComponent = () => {
+    const year = new Date().getFullYear();
+
     return (
         <>
             <div className="preloader">
-                <img className="preloader__image" width="55" src="/assets/images/loader.png" alt=""/>
+                <img className="preloader__image" width="55" src="/public/images/loader.png" alt=""/>
             </div>
             <div className="page-wrapper">
                 <header className="main-header">
@@ -12,19 +14,22 @@ export const LayoutComponent = () => {
                         <div className="container">
                             <div className="topbar__left">
                                 <div className="topbar__social">
-                                    <a href="#" className="fab fa-facebook-square"></a>
-                                    <a href="#" className="fab fa-twitter"></a>
-                                    <a href="#" className="fab fa-pinterest-p"></a>
-                                    <a href="#" className="fab fa-instagram"></a>
+                                    <a href="#" className="fa fa-facebook-square"></a>
+                                    <a href="#" className="fa fa-twitter"></a>
+                                    <a href="#" className="fa fa-pinterest-p"></a>
+                                    <a href="#" className="fa fa-instagram"></a>
                                 </div>
                                 <p>Welcome to True Grow Farms</p>
                             </div>
                             <div className="topbar__right">
                                 <a href="mailto:info@truegrowfarms.com">
-                                    <i className="agrikon-icon-email"></i>
+                                    <i className="fa fa-envelope-open"></i>
                                     <span>info@truegrowfarms.com</span>
                                 </a>
-                                <a href="#"><i className="agrikon-icon-clock"></i>Mon - Sat 8:00 - 6:30, Sunday - CLOSED</a>
+                                <a href="#">
+                                    <i className="fa fa-clock"></i>
+                                    Mon - Sat 8:00 - 6:30, Sunday - CLOSED
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -32,7 +37,7 @@ export const LayoutComponent = () => {
                         <div className="container">
                             <div className="logo-box">
                                 <a href="/" aria-label="logo image">
-                                    <img src="/assets/images/true_grow_farms_logo.png" width="153" alt=""/></a>
+                                    <img src="/images/true_grow_farms_logo.png" width="153" alt=""/></a>
                                 <span className="fa fa-bars mobile-nav__toggler"></span>
                             </div>
                             <ul className="main-menu__list">
@@ -74,7 +79,7 @@ export const LayoutComponent = () => {
                             <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
                                 <div className="footer-widget">
                                     <a href="" className="footer-widget__Logo">
-                                        <img src="/assets/images/true_grow_farms_logo.png" width="153" alt=""/>
+                                        <img src="/images/true_grow_farms_logo.png" width="153" alt=""/>
                                     </a>
 
                                     <form action="#" data-url="YOUR_MAILCHIMP_URL" className="mc-form">
@@ -85,9 +90,9 @@ export const LayoutComponent = () => {
                                     </form>
                                     <div className="mc-form__response"></div>
                                     <div className="footer__social">
-                                        <a href="#" className="fab fa-facebook-square"></a>
-                                        <a href="#" className="fab fa-twitter"></a>
-                                        <a href="#" className="fab fa-instagram"></a>
+                                        <a href="#" className="fa fa-facebook-square"></a>
+                                        <a href="#" className="fa fa-twitter"></a>
+                                        <a href="#" className="fa fa-instagram"></a>
                                     </div>
                                 </div>
                             </div>
@@ -141,7 +146,7 @@ export const LayoutComponent = () => {
                 </footer>
                 <div className="bottom-footer">
                     <div className="container">
-                        <p>© Copyright {{ date('Y') }} by True Grow Farms</p>
+                        <p>© Copyright {year} by True Grow Farms</p>
                         <div className="bottom-footer__links">
                             <a href="#">Terms & Conditions</a>
                             <a href="#">Privacy Policy</a>
@@ -154,10 +159,12 @@ export const LayoutComponent = () => {
                 <div className="mobile-nav__overlay mobile-nav__toggler"></div>
 
                 <div className="mobile-nav__content">
-                    <span className="mobile-nav__close mobile-nav__toggler"><i className="far fa-times"></i></span>
+                    <span className="mobile-nav__close mobile-nav__toggler">
+                        <i className="far fa-times"></i>
+                    </span>
                     <div className="logo-box">
                         <a href="{{ url('/') }}" aria-label="logo image">
-                            <img src="{{ asset('assets/images/true_grow_farms_logo.png') }}" width="155" alt="" /></a>
+                            <img src="/images/true_grow_farms_logo.png" width="155" alt="" /></a>
                     </div>
 
                     <div className="mobile-nav__container"></div>
@@ -168,46 +175,47 @@ export const LayoutComponent = () => {
                             <a href="mailto:info@truegrowfarms.com">info@truegrowfarms.com</a>
                         </li>
                         <li>
-                            <i class="agrikon-icon-telephone"></i>
+                            <i className="agrikon-icon-telephone"></i>
                             <a href="tel:682 214 3661">+1(518) 692 4744</a>
                         </li>
                     </ul>
-                    <div class="mobile-nav__top">
-                        <div class="mobile-nav__language">
-                            <img src="{{ asset('assets/images/resources/flag-1-1.jpg') }}" alt="">
-                                <label class="sr-only" for="language-select">select language</label>
+                    <div className="mobile-nav__top">
+                        <div className="mobile-nav__language">
+                            <img src="/images/resources/flag-1-1.jpg" alt=""/>
+                                <label className="sr-only" for="language-select">select language</label>
 
-                                <select class="selectpicker" id="language-select">
+                                <select className="selectpicker" id="language-select">
                                     <option value="english">English</option>
                                     <option value="arabic">Arabic</option>
                                 </select>
                         </div>
-                        <div class="mobile-nav__social">
-                            <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" aria-label="facebook"><i class="fab fa-facebook-square"></i></a>
-                            <a href="#" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+                        <div className="mobile-nav__social">
+                            <a href="#" aria-label="twitter"><i className="fa fa-twitter"></i></a>
+                            <a href="#" aria-label="facebook"><i className="fa fa-facebook-square"></i></a>
+                            <a href="#" aria-label="instagram"><i className="fa fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
 
             </div>
 
-            <div class="search-popup">
-                <div class="search-popup__overlay search-toggler"></div>
+            <div className="search-popup">
+                <div className="search-popup__overlay search-toggler"></div>
 
-                <div class="search-popup__content">
+                <div className="search-popup__content">
                     <form action="#">
-                        <label for="search" class="sr-only">search here</label>
+                        <label htmlFor="search" className="sr-only">search here</label>
                         <input type="text" id="search" placeholder="Search Here..." />
-                        <button type="submit" aria-label="search submit" class="thm-btn">
-                            <i class="fa fa-search"></i>
+                        <button type="submit" aria-label="search submit" className="thm-btn">
+                            <i className="fa fa-search"></i>
                         </button>
                     </form>
                 </div>
 
             </div>
 
-            <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a href="#" data-target="html" className="scroll-to-target scroll-to-top"><i className="fa fa-angle-up"></i></a>
         </>
     )
 }

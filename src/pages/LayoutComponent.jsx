@@ -1,4 +1,13 @@
 import {Link, Outlet} from "react-router-dom";
+import {
+    faClock,
+    faEnvelope,
+    faEnvelopeOpen,
+    faLocation,
+    faMobile,
+    faPaperPlane
+} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export const LayoutComponent = () => {
     const year = new Date().getFullYear();
@@ -19,15 +28,21 @@ export const LayoutComponent = () => {
                                     <a href="#" className="fa fa-pinterest-p"></a>
                                     <a href="#" className="fa fa-instagram"></a>
                                 </div>
-                                <p>Welcome to True Grow Farms</p>
+                                <p>Welcome to Nichola J Stein Farm</p>
                             </div>
                             <div className="topbar__right">
-                                <a href="mailto:info@truegrowfarms.com">
-                                    <i className="fa fa-envelope-open"></i>
-                                    <span>info@truegrowfarms.com</span>
+                                <a href="mailto:info@njsfarm.com">
+                                    <FontAwesomeIcon
+                                        icon={faEnvelopeOpen}
+                                        className="text-white"
+                                    />
+                                    <span>info@njsfarm.com</span>
                                 </a>
                                 <a href="#">
-                                    <i className="fa fa-clock"></i>
+                                    <FontAwesomeIcon
+                                        icon={faClock}
+                                        className="text-white"
+                                    />
                                     Mon - Sat 8:00 - 6:30, Sunday - CLOSED
                                 </a>
                             </div>
@@ -37,7 +52,7 @@ export const LayoutComponent = () => {
                         <div className="container">
                             <div className="logo-box">
                                 <a href="/" aria-label="logo image">
-                                    <img src="/images/true_grow_farms_logo.png" width="153" alt=""/></a>
+                                    <img src="/images/logo.png" width="153" alt=""/></a>
                                 <span className="fa fa-bars mobile-nav__toggler"></span>
                             </div>
                             <ul className="main-menu__list">
@@ -57,7 +72,10 @@ export const LayoutComponent = () => {
 
                             <div className="main-header__info">
                                 <a href="tel:682 214 3661" className="main-header__info-phone">
-                                    <i className="agrikon-icon-phone-call"></i>
+                                    <FontAwesomeIcon
+                                        icon={faMobile}
+                                        className="text-white"
+                                    />
                                     <span className="main-header__info-phone-content">
                                         <span className="main-header__info-phone-text">Call Anytime</span>
                                         <span className="main-header__info-phone-title">+1(518) 692 4744</span>
@@ -76,16 +94,20 @@ export const LayoutComponent = () => {
                 <footer className="site-footer">
                     <div className="container">
                         <div className="row">
+
                             <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
                                 <div className="footer-widget">
                                     <a href="" className="footer-widget__Logo">
-                                        <img src="/images/true_grow_farms_logo.png" width="153" alt=""/>
+                                        <img src="/images/logo.png" width="153" alt=""/>
                                     </a>
 
                                     <form action="#" data-url="YOUR_MAILCHIMP_URL" className="mc-form">
                                         <input type="email" name="EMAIL" placeholder="Email Address"/>
                                             <button type="submit">
-                                                <i className="agrikon-icon-right-arrow"></i>
+                                                <FontAwesomeIcon
+                                                    icon={faPaperPlane}
+                                                    style={{ color: '#255946' }}
+                                                />
                                             </button>
                                     </form>
                                     <div className="mc-form__response"></div>
@@ -97,7 +119,7 @@ export const LayoutComponent = () => {
                                 </div>
                             </div>
 
-                            <div className="col-sm-12 col-md-6 col-lg-6 col-xl-2">
+                            <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
                                 <div className="footer-widget footer-widget__links-widget">
                                     <h3 className="footer-widget__title">Links</h3>
                                     <ul className="list-unstyled footer-widget__links">
@@ -117,36 +139,41 @@ export const LayoutComponent = () => {
                                 </div>
                             </div>
 
-                            <div className="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                                <div className="footer-widget">
-                                    <h3 className="footer-widget__title">News</h3>
-                                </div>
-                            </div>
-
-                            <div className="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                            <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
                                 <h3 className="footer-widget__title">Contact</h3>
                                 <ul className="list-unstyled footer-widget__contact">
                                     <li>
-                                        <i className="agrikon-icon-telephone"></i>
+                                        <FontAwesomeIcon
+                                            icon={faMobile}
+                                            className="text-white mr-1"
+                                        />
                                         <a href="tel:682 214 3661">+1(518) 692 4744</a>
                                     </li>
                                     <li>
-                                        <i className="agrikon-icon-email"></i>
-                                        <a href="mailto:info@truegrowfarms.com">info@truegrowfarms.com</a>
+                                        <FontAwesomeIcon
+                                            icon={faEnvelope}
+                                            className="text-white mr-1"
+                                        />
+                                        <a href="mailto:info@njsfarm.com">info@njsfarm.com</a>
                                     </li>
                                     <li>
-                                        <i className="agrikon-icon-pin"></i>
+                                        <FontAwesomeIcon
+                                            icon={faLocation}
+                                            className="text-white mr-1"
+                                        />
                                         <a href="#">Zurich, Switzerland</a>
                                         <a href="#">New York, United States</a>
                                     </li>
                                 </ul>
                             </div>
+
                         </div>
                     </div>
                 </footer>
+
                 <div className="bottom-footer">
                     <div className="container">
-                        <p>© Copyright {year} by True Grow Farms</p>
+                        <p>© Copyright {year} by Nichola J Stein Farm</p>
                         <div className="bottom-footer__links">
                             <a href="#">Terms & Conditions</a>
                             <a href="#">Privacy Policy</a>
@@ -155,6 +182,7 @@ export const LayoutComponent = () => {
                     </div>
                 </div>
             </div>
+
             <div className="mobile-nav__wrapper">
                 <div className="mobile-nav__overlay mobile-nav__toggler"></div>
 
@@ -163,8 +191,8 @@ export const LayoutComponent = () => {
                         <i className="far fa-times"></i>
                     </span>
                     <div className="logo-box">
-                        <a href="{{ url('/') }}" aria-label="logo image">
-                            <img src="/images/true_grow_farms_logo.png" width="155" alt="" /></a>
+                        <a href="/" aria-label="logo image">
+                            <img src="/images/logo.png" width="155" alt="" /></a>
                     </div>
 
                     <div className="mobile-nav__container"></div>
@@ -172,7 +200,7 @@ export const LayoutComponent = () => {
                     <ul className="mobile-nav__contact list-unstyled">
                         <li>
                             <i className="agrikon-icon-email"></i>
-                            <a href="mailto:info@truegrowfarms.com">info@truegrowfarms.com</a>
+                            <a href="mailto:info@njsfarm.com">info@njsfarm.com</a>
                         </li>
                         <li>
                             <i className="agrikon-icon-telephone"></i>
@@ -201,17 +229,18 @@ export const LayoutComponent = () => {
 
             <div className="search-popup">
                 <div className="search-popup__overlay search-toggler"></div>
-
                 <div className="search-popup__content">
                     <form action="#">
                         <label htmlFor="search" className="sr-only">search here</label>
                         <input type="text" id="search" placeholder="Search Here..." />
                         <button type="submit" aria-label="search submit" className="thm-btn">
-                            <i className="fa fa-search"></i>
+                            <FontAwesomeIcon
+                                icon={faPaperPlane}
+                                style={{ color: '#255946' }}
+                            />
                         </button>
                     </form>
                 </div>
-
             </div>
 
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}

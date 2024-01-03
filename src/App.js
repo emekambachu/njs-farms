@@ -38,6 +38,8 @@ import {
 import {LayoutComponent} from "./pages/LayoutComponent";
 import {HomeComponent} from "./pages/HomeComponent";
 import {AboutComponent} from "./pages/AboutComponent";
+import {GalleryComponent} from "./pages/GalleryComponent";
+import {ContactComponent} from "./pages/ContactComponent";
 
 function App() {
   return (
@@ -52,6 +54,14 @@ function App() {
                   <Route
                       path='/about'
                       element={<AboutComponent/>}
+                  ></Route>
+                  <Route
+                      path='/gallery'
+                      element={<GalleryComponent/>}
+                  ></Route>
+                  <Route
+                      path='/contact'
+                      element={<ContactComponent/>}
                   ></Route>
               </Route>
           </Routes>

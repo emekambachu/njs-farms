@@ -161,8 +161,7 @@ export const LayoutComponent = () => {
                                             icon={faLocation}
                                             className="text-white mr-1"
                                         />
-                                        <a href="#">Zurich, Switzerland</a>
-                                        <a href="#">New York, United States</a>
+                                        <a href="#">El Paso TX, United States</a>
                                     </li>
                                 </ul>
                             </div>

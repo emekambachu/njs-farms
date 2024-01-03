@@ -90,7 +90,7 @@ export const ContactComponent = () => {
                             <div className="col-sm-12 col-md-12 col-lg-6">
                                 <div className="contact-infos__single">
                                     <h3>Visit Company</h3>
-                                    <p>New York. United States of America.</p>
+                                    <p>El Paso TX, United States</p>
                                     <p>Zurich. Switzerland.</p>
                                 </div>
                             </div>

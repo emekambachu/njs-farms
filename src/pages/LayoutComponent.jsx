@@ -5,12 +5,22 @@ import {
     faEnvelopeOpen,
     faLocation,
     faMobile,
-    faPaperPlane
+    faPaperPlane, faTimes
 } from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {useState} from "react";
 
 export const LayoutComponent = () => {
     const year = new Date().getFullYear();
+    const [mobileMenu, setMobileMenu] = useState(false)
+
+    const toggleMobileMenu = () => {
+        if(mobileMenu === false){
+            setMobileMenu(true)
+        }else {
+            setMobileMenu(false)
+        }
+    }
 
     return (
         <>
@@ -53,7 +63,7 @@ export const LayoutComponent = () => {
                             <div className="logo-box">
                                 <a href="/" aria-label="logo image">
                                     <img src="/images/logo.png" width="153" alt=""/></a>
-                                <span className="fa fa-bars mobile-nav__toggler"></span>
+                                <span onClick={toggleMobileMenu} className="fa fa-bars mobile-nav__toggler"></span>
                             </div>
                             <ul className="main-menu__list">
                                 <li>
@@ -182,19 +192,37 @@ export const LayoutComponent = () => {
                 </div>
             </div>
 
-            <div className="mobile-nav__wrapper">
+            <div className={`mobile-nav__wrapper ${mobileMenu ? 'expanded' : ''}`}>
                 <div className="mobile-nav__overlay mobile-nav__toggler"></div>
 
                 <div className="mobile-nav__content">
-                    <span className="mobile-nav__close mobile-nav__toggler">
-                        <i className="far fa-times"></i>
+                    <span onClick={toggleMobileMenu} className="mobile-nav__close mobile-nav__toggler">
+                        <FontAwesomeIcon
+                            icon={faTimes}
+                            className="text-white mr-1"
+                        />
                     </span>
                     <div className="logo-box">
                         <a href="/" aria-label="logo image">
                             <img src="/images/logo.png" width="155" alt="" /></a>
                     </div>
 
-                    <div className="mobile-nav__container"></div>
+                    <div className="mobile-nav__container">
+                        <ul className="list-unstyled">
+                            <li>
+                                <Link className="text-white" to="/">Home</Link>
+                            </li>
+                            <li>
+                                <Link className="text-white" to="/about">About</Link>
+                            </li>
+                            <li>
+                                <Link className="text-white" to="/gallery">Gallery</Link>
+                            </li>
+                            <li>
+                                <Link className="text-white" to="/contact">Contact</Link>
+                            </li>
+                        </ul>
+                    </div>
 
                     <ul className="mobile-nav__contact list-unstyled">
                         <li>
@@ -206,10 +234,11 @@ export const LayoutComponent = () => {
                             <a href="tel:682 214 3661">+1(518) 692 4744</a>
                         </li>
                     </ul>
+
                     <div className="mobile-nav__top">
                         <div className="mobile-nav__language">
                             <img src="/images/resources/flag-1-1.jpg" alt=""/>
-                                <label className="sr-only" for="language-select">select language</label>
+                                <label className="sr-only" htmlFor="language-select">select language</label>
 
                                 <select className="selectpicker" id="language-select">
                                     <option value="english">English</option>
@@ -222,8 +251,8 @@ export const LayoutComponent = () => {
                             <a href="#" aria-label="instagram"><i className="fa fa-instagram"></i></a>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
 
             <div className="search-popup">

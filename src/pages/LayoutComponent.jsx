@@ -1,4 +1,4 @@
-import {Link, Outlet} from "react-router-dom";
+import {Link, Outlet, useLocation} from "react-router-dom";
 import {
     faClock,
     faEnvelope,
@@ -8,11 +8,21 @@ import {
     faPaperPlane, faTimes
 } from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export const LayoutComponent = () => {
     const year = new Date().getFullYear();
-    const [mobileMenu, setMobileMenu] = useState(false)
+    const [mobileMenu, setMobileMenu] = useState(false);
+    const location = useLocation();
+
+    // Detect location change
+    useEffect(() => {
+        // close mobile menu on location change
+        if(mobileMenu === true) {
+            setMobileMenu(false);
+        }
+        console.log('Location changed: '+location.pathname);
+    }, [location]);
 
     const toggleMobileMenu = () => {
         if(mobileMenu === false){
@@ -62,7 +72,8 @@ export const LayoutComponent = () => {
                         <div className="container">
                             <div className="logo-box">
                                 <a href="/" aria-label="logo image">
-                                    <img src="/images/logo.png" width="153" alt=""/></a>
+                                    <img src="/images/logo.png" width="153" alt=""/>
+                                </a>
                                 <span onClick={toggleMobileMenu} className="fa fa-bars mobile-nav__toggler"></span>
                             </div>
                             <ul className="main-menu__list">
